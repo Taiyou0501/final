@@ -1,0 +1,407 @@
+.index-user-body {
+    margin: 0;
+    background-image: url(Header.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.index-main-text {
+    color: white;
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 4vw;
+}
+
+.index-menu-text {
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 2vw;
+    margin-left: 2vw;
+}
+
+.index-user-header {
+    color: white;
+    padding: 2vw;
+    text-align: left;
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 5vw;
+    font-weight: bold;
+}
+
+.index-header-tab {
+    background-color: #D9D9D9;
+    padding: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: 2.5px solid #000000;
+    outline-offset: -2.4px;
+    flex-shrink: 0;
+}
+
+.index-header-tab .index-menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.index-header-tab .index-menu-btn {
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 3vw;
+    cursor: pointer;
+}
+
+.index-header-tab .index-user-actions {
+    display: flex;
+    gap: 2vw;
+}
+
+.index-header-tab .index-user-actions .index-profile-btn,
+.index-header-tab .index-user-actions .index-logout-btn {
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 3vw;
+    cursor: pointer;
+}
+
+.index-tabs-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    background-color: #D9D9D9;
+    padding: 2vw;
+}
+
+
+.rpc-tabs-user,
+.et-tabs-user,
+.ft-tabs,
+.map-tabs,
+.final-tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+    background-color: #D9D9D9;
+    flex: 1;
+}
+
+/*transition not yet working*/
+.index-report-btn.clicked {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/*maps*/
+.map-text {
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 5vw;
+    color: #ff0000;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    text-align: left;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 450px;
+    position: relative;
+    border: 3px solid #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#user-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.camera-container {
+    position: relative;
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    
+}
+
+.final-message {
+    margin-top: 16vw;
+}
+
+.final-text {
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 10vw;
+    color: #ff0000;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    text-align: left;
+}
+
+.final-subtext {
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 5vw;
+    color: #000000;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    text-align: center;
+}
+
+/* Landscape mode for PC */
+@media (min-width: 769px) {
+    .camera-container {
+        flex-direction: row;
+        width: 80%;
+        height: auto;
+    }
+
+    .video-rpc {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Portrait mode for mobile devices */
+@media (max-width: 768px) {
+    .camera-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .video-rpc {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.video-rpc {
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+}
+
+.capture-btn {
+    background-color: transparent;
+    border: 3px solid #000000;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 5vw;
+}
+
+.capture-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.capture-description {
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 2vw;
+    color: #000000;
+    margin-top: 1vw;
+    text-align: center;
+}
+
+#photo,
+#photo-rpc {
+    margin-top: 1vw;
+    border: 1px solid #ddd;
+}
+
+.index-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically within the .index-tab */
+    align-items: center; /* Center horizontally within the .index-tab */
+    width: 100%;
+    height: 100%;
+    max-width: 80vw; /* Adjust as needed */
+    max-height: 80vh; /* Adjust as needed */
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 0;
+}
+
+
+
+.et-submit-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+}
+
+.et-report-btn {
+    background-position: center;
+}
+
+.et-text-report {
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 3vw;
+    color: #ff0000;
+    margin-top: 1vw;
+    text-align: center;
+}
+
+.index-tab .index-report-btn,
+.et-report-btn {
+    background-image: url(/img/Icons/report.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.index-tab .index-report-btn:hover,
+.capture-btn:hover,
+.et-report-btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #ffebeb;
+}
+
+.index-tab .index-text-report {
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 3vw;
+    color: #ff0000;
+    margin-top: 1vw;
+}
+
+.index-tab .index-subtext {
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 1.5vw;
+    color: #000000;
+    margin-top: 1vw;
+}
+
+.index-icon {
+    vertical-align: middle;
+}
+
+/* Media Queries for Additional Responsiveness */
+@media (max-width: 768px) {
+    .index-user-header {
+        font-size: 4vw;
+        padding: 3vw;
+    }
+
+    .index-menu-text {
+        font-size: 1.5vw;
+        margin-left: 1vw;
+    }
+
+    .index-header-tab .index-menu-btn,
+    .index-header-tab .index-user-actions .index-profile-btn,
+    .index-header-tab .index-user-actions .index-logout-btn {
+        font-size: 4vw;
+    }
+
+    .index-tab .index-report-btn {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .index-tab .index-text-report {
+        font-size: 2.5vw;
+    }
+
+    .index-tab .index-subtext {
+        font-size: 2vw;
+    }
+
+    .capture-btn {
+        font-size: 4vw;
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .capture-description {
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .index-header-tab {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .index-header-tab .index-user-actions {
+        flex-direction: column;
+        gap: 1vw;
+    }
+
+    .index-menu-text {
+        font-size: 1.5vw;
+    }
+
+    .index-tab .index-report-btn {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .index-tab .index-text-report {
+        font-size: 2vw;
+    }
+
+    .index-tab .index-subtext {
+        font-size: 1.5vw;
+    }
+}
+
+.return-index-btn {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    font-family: 'Russo One', Helvetica, sans-serif;
+    font-size: 4vw;
+    padding: 1.5vw 3vw;
+    margin: 2vw 0;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.return-index-btn:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+}
+
+.return-index-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
